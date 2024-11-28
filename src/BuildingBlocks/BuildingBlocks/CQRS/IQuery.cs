@@ -2,7 +2,7 @@
 
 namespace BuildingBlocks.CQRS
 {
-    public interface IQeury : IRequest<Unit>
+    public interface IQuery : IRequest<Unit>
     {
 
     }
