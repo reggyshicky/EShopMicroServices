@@ -1,7 +1,7 @@
-# EShopMicroServices
+## EShopMicroServices
 - This Microservices implements e-commerce application entailing modules which are Catalog, Basket, Discount and Ordering microservices with NoSQL (DocumentDb, Redis) and Relational databases (PostgreSQL, Sql Server) while communicating over RabbitMQ Event Driven Communication and using Yarp API Gateway.
 
-# CONTENT (Key Backend Concepts were covered in this project)
+## CONTENT (Key Backend Concepts were covered in this project)
 - ASPNET Core 8 Web API Development of Microservices
 - ASPNET Minimal APIs and latest features of .Net8 and C# 12
 - Vertical Slice Architecture implementation with Feature folders
