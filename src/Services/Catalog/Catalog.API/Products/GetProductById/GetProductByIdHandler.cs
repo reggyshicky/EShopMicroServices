@@ -1,5 +1,4 @@
-﻿
-namespace Catalog.API.Products.GetProductById
+﻿namespace Catalog.API.Products.GetProductById
 {
     public record GetProductByIdQuery(Guid Id) : IQuery<GetProductByIdResult>;
 
@@ -18,7 +17,7 @@ namespace Catalog.API.Products.GetProductById
             {
                 throw new ProductNotFoundException();
             }
-            return new GetProductByIdResult(prpduct);
+            return new GetProductByIdResult(product);
 
 
         }
