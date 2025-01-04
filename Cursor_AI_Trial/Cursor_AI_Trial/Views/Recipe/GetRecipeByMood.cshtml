@@ -1,0 +1,15 @@
+﻿@model Cursor_AI_Trial.Models.Recipe
+
+<h2>Recipe Suggestion</h2>
+
+<div class="card">
+    <div class="card-body">
+        <h3 class="card-title">@Model.Name</h3>
+        <p class="card-text">@Model.Description</p>
+        <p class="card-text"><small class="text-muted">Mood: @Model.Mood?.Name</small></p>
+    </div>
+</div>
+
+<div class="mt-3">
+    <a href="@Url.Action("Index", "Recipe")" class="btn btn-secondary">Back to Moods</a>
+</div>

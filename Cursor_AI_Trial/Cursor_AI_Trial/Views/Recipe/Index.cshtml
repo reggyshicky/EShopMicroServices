@@ -1,0 +1,19 @@
+﻿@model IEnumerable<Cursor_AI_Trial.Models.Mood>
+
+<h2>Select Your Mood</h2>
+
+<div class="row">
+    @foreach (var mood in Model)
+    {
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">@mood.Name</h5>
+                    <p class="card-text">@mood.Description</p>
+                    <a href="@Url.Action("GetRecipeByMood", "Recipe", new { moodId = mood.Id })"
+                       class="btn btn-primary">Get Recipe</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
