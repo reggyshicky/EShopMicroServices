@@ -19,11 +19,13 @@
         }
     }
     //contains the business logic to handle the create Product
-    internal class CreateProductCommandHandler(IDocumentSession session, IValidator<CreateProductCommand> validator) : ICommandHandler<CreateProductCommand, CreateProductResult>
+    internal class CreateProductCommandHandler(IDocumentSession session, ILogger<CreateProductCommandHandler> logger) : ICommandHandler<CreateProductCommand, CreateProductResult>
     {
         public async Task<CreateProductResult> Handle(CreateProductCommand command, CancellationToken cancellationToken)
         {
             //create Product entity from command object
+            logger.LogInformation("CreateProductCommandHandler.Handle called with {@Query}", command);
+
 
             var product = new Product()
             {

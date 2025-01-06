@@ -1,14 +1,13 @@
 ﻿using BuildingBlocks.CQRS;
 using FluentValidation;
 using MediatR;
-using System.Windows.Input;
 
 namespace BuildingBlocks.Behaviors
 {
     public class ValidationBehavior<TRequest, TResponse>
         (IEnumerable<IValidator<TRequest>> validators)
         : IPipelineBehavior<TRequest, TResponse>
-        where TRequest : ICommand<TRequest>
+        where TRequest : ICommand<TResponse>
     {
         //TRequest request represents incoming request from the client and equestHandlerDelegate<TResponse> next 
         //represents the next pipeline behaviour or actual handler method
