@@ -25,13 +25,6 @@
         {
             //create Product entity from command object
 
-            var result = await validator.ValidateAsync(command, cancellationToken);
-            var errors = result.Errors.Select(x => x.ErrorMessage).ToList();
-            if (errors.Any())
-            {
-                throw new ValidationException(errors.FirstOrDefault());
-            }
-
             var product = new Product()
             {
                 Name = command.Name,
